@@ -1,0 +1,172 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1D6D6"
+    tools:context=".HorarioActivity">
+
+    <!-- Endereço Input -->
+    <EditText
+        android:id="@+id/etEndereco"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edittext_background"
+        android:drawablePadding="8dp"
+        android:hint="Endereço"
+        android:paddingStart="12dp"
+        android:textColor="#4A7A68"
+        android:textColorHint="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Escolha o Horário Label -->
+    <TextView
+        android:id="@+id/tvEscolhaHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ESCOLHA O HORÁRIO"
+        android:textColor="#4A7A68"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/etEndereco"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"/>
+
+    <!-- Partida Label -->
+    <Button
+        android:id="@+id/btnPartida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="PARTIDA"
+        android:backgroundTint="#4A7A68"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/tvEscolhaHorario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Partida - Dia, Hora, Minutos -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnPartida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp">
+
+        <EditText
+            android:id="@+id/etDiaPartida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="DIA"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:gravity="center"
+            android:textColor="#4A7A68"/>
+
+        <EditText
+            android:id="@+id/etHoraPartida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="HORA"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:textColor="#4A7A68"/>
+
+        <EditText
+            android:id="@+id/etMinutosPartida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="MINUTOS"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:textColor="#4A7A68"/>
+    </LinearLayout>
+
+    <!-- Chegada Label -->
+    <Button
+        android:id="@+id/btnChegada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CHEGADA"
+        android:backgroundTint="#4A7A68"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/etMinutosPartida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Chegada - Dia, Hora, Minutos -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnChegada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp">
+
+        <EditText
+            android:id="@+id/etDiaChegada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="DIA"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:gravity="center"
+            android:textColor="#4A7A68"/>
+
+        <EditText
+            android:id="@+id/etHoraChegada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="HORA"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:textColor="#4A7A68"/>
+
+        <EditText
+            android:id="@+id/etMinutosChegada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="MINUTOS"
+            android:background="@drawable/edittext_background"
+            android:inputType="number"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:textColor="#4A7A68"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

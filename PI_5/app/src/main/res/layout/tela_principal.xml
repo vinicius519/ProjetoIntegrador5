@@ -1,0 +1,167 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D1D6D6"
+    tools:context=".ProfileActivity">
+
+    <!-- User Name -->
+
+    <!-- User Rating -->
+
+    <!-- Fazer Button -->
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="NOME"
+        android:textColor="#4A7A68"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="★ 4.90"
+        android:textColor="#808080"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <Button
+        android:id="@+id/btnFazer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="FAZER"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/tvRating"
+        app:layout_constraintEnd_toStartOf="@id/btnReceber"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintWidth_percent="0.45"/>
+
+    <!-- Receber Button -->
+    <Button
+        android:id="@+id/btnReceber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="RECEBER"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/tvRating"
+        app:layout_constraintStart_toEndOf="@id/btnFazer"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintWidth_percent="0.45"/>
+
+    <!-- Histórico de Caronas Button -->
+    <Button
+        android:id="@+id/btnHistorico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="HISTÓRICO DE CARONAS"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4A7A68"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/btnFazer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="32dp"/>
+
+    <!-- Recent Locations List (1st item) -->
+    <ImageView
+        android:id="@+id/ivLocationIcon1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_clock"
+        android:tint="#808080"
+        app:layout_constraintTop_toBottomOf="@id/btnHistorico"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"/>
+
+    <TextView
+        android:id="@+id/tvLocation1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LOCAL"
+        android:textSize="16sp"
+        android:textColor="#4A7A68"
+        app:layout_constraintStart_toEndOf="@id/ivLocationIcon1"
+        app:layout_constraintTop_toTopOf="@id/ivLocationIcon1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"/>
+
+    <TextView
+        android:id="@+id/tvAddress1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ENDEREÇO"
+        android:textSize="12sp"
+        android:textColor="#808080"
+        app:layout_constraintStart_toEndOf="@id/ivLocationIcon1"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"/>
+
+    <!-- Recent Locations List (2nd item) -->
+    <ImageView
+        android:id="@+id/ivLocationIcon2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_clock"
+        android:tint="#808080"
+        app:layout_constraintTop_toBottomOf="@id/tvAddress1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="32dp"/>
+
+    <TextView
+        android:id="@+id/tvLocation2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LOCAL"
+        android:textSize="16sp"
+        android:textColor="#4A7A68"
+        app:layout_constraintStart_toEndOf="@id/ivLocationIcon2"
+        app:layout_constraintTop_toTopOf="@id/ivLocationIcon2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"/>
+
+    <TextView
+        android:id="@+id/tvAddress2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ENDEREÇO"
+        android:textSize="12sp"
+        android:textColor="#808080"
+        app:layout_constraintStart_toEndOf="@id/ivLocationIcon2"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
